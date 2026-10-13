@@ -1,25 +1,18 @@
 #include <stdio.h>
 int main()
 {
-    int drink;
-    printf("商品品項有:1. 紅茶 30元\n2. 綠茶 35元\n3. 奶茶 50元\n4. 果汁 45元\n請輸入選項");
-    scanf("%d",&drink);
-    switch(drink)
+    int i,j;
+    for (i=1;i<=4;i++)
     {
-        case 1:
-        printf("1. 紅茶 30元");
-        break;
-        case 2:
-        printf("2. 綠茶 35元");
-        break;
-        case 3:
-        printf("3. 奶茶 50元");
-        break;
-        case 4:
-        printf("4. 果汁 45元");
-        break;
-        default:
-        printf("無此飲料選項");
+        for(j=1;j<=4-i;j++)
+        {
+           printf(" "); 
+        }
+        for(j=1;j<=2*i-1;j++)
+        {
+            printf("@");
+        }
+        printf("\n");
     }
 return 0;
 }
