@@ -1,21 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    int password;
-    printf("請輸入密碼(輸入-1退出)");
-    scanf("%d",&password);
-    while (password !=1234 && password !=-1)
+    int money;
+    int total=0;
+    do
     {
-        printf("密碼錯誤,請重新輸入,輸入-1退出");
-        scanf("%d",&password);
-    }
-    if (password ==1234)
-    {
-            printf("登入成功");
-    }
-    else
-    {
-         printf("已退出程式");
-    }
+        printf("請輸入提款金額（輸入0結束）：");
+        scanf("%d",&money);
+        total+=money;
+    } while (money !=0);
+    printf("提款總金額：%d",total);
     return 0;
 }
