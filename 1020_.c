@@ -1,14 +1,22 @@
 #include <stdio.h>
 int main()
 {
-    int money;
-    int total=0;
-    do
+    int i,num;
+    for (i=1;i<=5;i++)
     {
-        printf("請輸入提款金額（輸入0結束）：");
-        scanf("%d",&money);
-        total+=money;
-    } while (money !=0);
-    printf("提款總金額：%d",total);
+        printf("輸入整數");
+        scanf("%d",&num);
+        if(num==0)
+        {
+            printf("結束");
+            break;
+        }
+        if(num<0)
+        {
+            printf("負數不處理");
+            continue;
+        }
+        printf("%d\n",num);
+    }
     return 0;
 }
